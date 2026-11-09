@@ -272,7 +272,7 @@ it('re-reads guards on rerender and supports wrapped children without nested rou
   expect(screen.queryByText('Guest content')).not.toBeInTheDocument();
   expect(getSession()).toEqual(fixed);
 });
-it('wires real App guest routes but adds no production destination placeholders', async () => {
+it('logs Admin into the real App dashboard with three approved stats and logs out', async () => {
   const user = userEvent.setup();
   render(
     <MemoryRouter initialEntries={['/login']}>
@@ -282,7 +282,11 @@ it('wires real App guest routes but adds no production destination placeholders'
   await user.type(screen.getByLabelText('Username'), 'admin');
   await user.type(screen.getByLabelText('Password'), 'admin');
   await user.click(screen.getByRole('button', { name: 'Log in' }));
-  expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Page not found');
+  expect(screen.getByRole('heading', { level: 1, name: 'Admin dashboard', exact: true })).toBeInTheDocument();
+  const statistics = screen.getByLabelText('Approved statistics');
+  expect(within(statistics).getAllByRole('term').map((term) => term.textContent)).toEqual([
+    'Total Posts', 'Total Users', 'Total Admins',
+  ]);
   expect(getSession()).toEqual(fixed);
   await user.click(screen.getByRole('button', { name: 'Log out' }));
   expect(getSession()).toBeNull();

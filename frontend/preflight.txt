@@ -1,0 +1,602 @@
+
+## landing
+Accessibility:
+{
+  "role": "WebArea",
+  "name": "WriteSpace — Room for your words",
+  "children": [
+    {
+      "role": "link",
+      "name": "Skip to content"
+    },
+    {
+      "role": "link",
+      "name": "WriteSpace"
+    },
+    {
+      "role": "link",
+      "name": "Log in"
+    },
+    {
+      "role": "link",
+      "name": "Register"
+    },
+    {
+      "role": "text",
+      "name": "A BROWSER-LOCAL WRITING DEMO"
+    },
+    {
+      "role": "heading",
+      "name": "Room for your words.",
+      "level": 1
+    },
+    {
+      "role": "text",
+      "name": "A quiet place to write, read, and explore. Start with an idea, give it space, and discover the stories in your browser."
+    },
+    {
+      "role": "link",
+      "name": "Get started"
+    },
+    {
+      "role": "link",
+      "name": "Already have an account? Log in"
+    },
+    {
+      "role": "heading",
+      "name": "Less noise. More story.",
+      "level": 2
+    },
+    {
+      "role": "heading",
+      "name": "Words come first",
+      "level": 3
+    },
+    {
+      "role": "text",
+      "name": "A simple plain-text space for ideas, reflections, and the stories you want to tell."
+    },
+    {
+      "role": "heading",
+      "name": "Read at your own pace",
+      "level": 3
+    },
+    {
+      "role": "text",
+      "name": "Discover the latest stories saved in this browser, with room to focus on each one."
+    },
+    {
+      "role": "heading",
+      "name": "A place to practice",
+      "level": 3
+    },
+    {
+      "role": "text",
+      "name": "Try User and Admin workflows in a small local demo, without a backend or cloud account."
+    },
+    {
+      "role": "heading",
+      "name": "Latest stories",
+      "level": 2
+    },
+    {
+      "role": "text",
+      "name": "A glimpse of what is saved in this browser."
+    },
+    {
+      "role": "text",
+      "name": "No stories yet. Your first story can start here."
+    },
+    {
+      "role": "text",
+      "name": "Demo only."
+    },
+    {
+      "role": "text",
+      "name": " Passwords are stored in plaintext in localStorage."
+    },
+    {
+      "role": "text",
+      "name": " "
+    },
+    {
+      "role": "text",
+      "name": "The fixed Admin login is "
+    },
+    {
+      "role": "text",
+      "name": "admin/admin"
+    },
+    {
+      "role": "text",
+      "name": "."
+    },
+    {
+      "role": "text",
+      "name": " "
+    },
+    {
+      "role": "text",
+      "name": "Client-side guards are not security. Do not use real credentials or sensitive information."
+    },
+    {
+      "role": "text",
+      "name": " "
+    },
+    {
+      "role": "text",
+      "name": "Accounts and stories stay in this browser; clearing browser data removes them. No cloud sync or backup is provided."
+    },
+    {
+      "role": "text",
+      "name": "WriteSpace — Room for your words."
+    },
+    {
+      "role": "text",
+      "name": "A local demo, not a shared publishing service."
+    }
+  ]
+}
+Styles:
+{
+  "font": "\"Trebuchet MS\", \"Gill Sans\", sans-serif",
+  "background": "rgb(248, 246, 240)",
+  "width": 1280
+}
+HTML:
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WriteSpace: a calm, browser-local demo for plain-text stories. Never use real credentials or sensitive information.">
+    <meta name="theme-color" content="#f8f6f0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>WriteSpace — Room for your words</title>
+    <script type="module" crossorigin="" src="/assets/index-BPWyDRzV.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-DI0gnsec.css">
+  </head>
+  <body class="bg-background font-sans text-foreground antialiased">
+    <div id="root"><a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:z-30 focus:bg-surface focus:p-4">Skip to content</a><header class="sticky top-0 z-20 border-b border-border bg-background"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-6 py-4"><a class="rounded-control font-display text-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href="/">WriteSpace</a><button type="button" aria-expanded="false" aria-controls="public-navigation" aria-label="Open navigation" class="rounded-control px-3 py-2 text-sm hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:hidden"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button><nav id="public-navigation" aria-label="Public navigation" class="hidden w-full flex-col gap-2 md:flex md:w-auto md:flex-row md:items-center"><a class="rounded-control px-3 py-2 text-sm hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href="/login">Log in</a><a class="rounded-control px-3 py-2 text-sm hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href="/register">Register</a></nav></div></header><main id="main" class="mx-auto max-w-6xl px-6"><section aria-labelledby="hero-title" class="py-16 md:py-24"><p class="mb-6 text-sm font-medium uppercase tracking-widest text-foreground-muted">A browser-local writing demo</p><h1 id="hero-title" class="max-w-3xl font-display text-hero font-normal">Room for your words.</h1><p class="mt-6 max-w-xl text-lg leading-relaxed text-foreground-muted">A quiet place to write, read, and explore. Start with an idea, give it space, and discover the stories in your browser.</p><div class="mt-8 flex flex-wrap items-center gap-6"><a class="rounded-control focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring bg-primary-600 px-5 py-3 font-medium text-surface transition-colors duration-quick hover:bg-primary-700 motion-reduce:transition-none" href="/register">Get started</a><a class="rounded-control focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring py-3 underline underline-offset-4" href="/login">Already have an account? Log in</a></div></section><section aria-labelledby="features-title" class="pb-section"><h2 id="features-title" class="mb-8 font-display text-3xl">Less noise. More story.</h2><div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"><article class="rounded-control border border-border p-6"><h3 class="mb-3 font-display text-2xl">Words come first</h3><p class="leading-relaxed text-foreground-muted">A simple plain-text space for ideas, reflections, and the stories you want to tell.</p></article><article class="rounded-control border border-border p-6"><h3 class="mb-3 font-display text-2xl">Read at your own pace</h3><p class="leading-relaxed text-foreground-muted">Discover the latest stories saved in this browser, with room to focus on each one.</p></article><article class="rounded-control border border-border p-6"><h3 class="mb-3 font-display text-2xl">A place to practice</h3><p class="leading-relaxed text-foreground-muted">Try User and Admin workflows in a small local demo, without a backend or cloud account.</p></article></div></section><section aria-labelledby="latest-title" class="pb-section"><h2 id="latest-title" class="font-display text-3xl">Latest stories</h2><p class="mb-8 mt-3 text-foreground-muted">A glimpse of what is saved in this browser.</p><p class="rounded-control border border-border p-6 text-foreground-muted">No stories yet. Your first story can start here.</p></section><aside aria-label="Demo limitations" class="rounded-control border border-border px-5 py-4 text-sm leading-relaxed text-foreground-muted"><p><strong class="font-semibold text-foreground">Demo only.</strong> Passwords are stored in plaintext in localStorage. The fixed Admin login is <strong class="font-semibold">admin/admin</strong>. Client-side guards are not security. Do not use real credentials or sensitive information. Accounts and stories stay in this browser; clearing browser data removes them. No cloud sync or backup is provided.</p></aside></main><footer class="mx-auto mt-16 flex max-w-6xl flex-wrap justify-between gap-4 border-t border-border px-6 py-8 text-sm text-foreground-muted"><p>WriteSpace — Room for your words.</p><p>A local demo, not a shared publishing service.</p></footer></div>
+  
+
+</body></html>
+
+## mobile-menu
+Accessibility:
+{
+  "role": "WebArea",
+  "name": "WriteSpace — Room for your words",
+  "children": [
+    {
+      "role": "link",
+      "name": "Skip to content"
+    },
+    {
+      "role": "link",
+      "name": "WriteSpace"
+    },
+    {
+      "role": "button",
+      "name": "Close navigation",
+      "expanded": true,
+      "focused": true
+    },
+    {
+      "role": "link",
+      "name": "Log in"
+    },
+    {
+      "role": "link",
+      "name": "Register"
+    },
+    {
+      "role": "text",
+      "name": "A BROWSER-LOCAL WRITING DEMO"
+    },
+    {
+      "role": "heading",
+      "name": "Room for your words.",
+      "level": 1
+    },
+    {
+      "role": "text",
+      "name": "A quiet place to write, read, and explore. Start with an idea, give it space, and discover the stories in your browser."
+    },
+    {
+      "role": "link",
+      "name": "Get started"
+    },
+    {
+      "role": "link",
+      "name": "Already have an account? Log in"
+    },
+    {
+      "role": "heading",
+      "name": "Less noise. More story.",
+      "level": 2
+    },
+    {
+      "role": "heading",
+      "name": "Words come first",
+      "level": 3
+    },
+    {
+      "role": "text",
+      "name": "A simple plain-text space for ideas, reflections, and the stories you want to tell."
+    },
+    {
+      "role": "heading",
+      "name": "Read at your own pace",
+      "level": 3
+    },
+    {
+      "role": "text",
+      "name": "Discover the latest stories saved in this browser, with room to focus on each one."
+    },
+    {
+      "role": "heading",
+      "name": "A place to practice",
+      "level": 3
+    },
+    {
+      "role": "text",
+      "name": "Try User and Admin workflows in a small local demo, without a backend or cloud account."
+    },
+    {
+      "role": "heading",
+      "name": "Latest stories",
+      "level": 2
+    },
+    {
+      "role": "text",
+      "name": "A glimpse of what is saved in this browser."
+    },
+    {
+      "role": "text",
+      "name": "No stories yet. Your first story can start here."
+    },
+    {
+      "role": "text",
+      "name": "Demo only."
+    },
+    {
+      "role": "text",
+      "name": " Passwords are stored in plaintext in localStorage."
+    },
+    {
+      "role": "text",
+      "name": " "
+    },
+    {
+      "role": "text",
+      "name": "The fixed Admin login is "
+    },
+    {
+      "role": "text",
+      "name": "admin/admin"
+    },
+    {
+      "role": "text",
+      "name": "."
+    },
+    {
+      "role": "text",
+      "name": " "
+    },
+    {
+      "role": "text",
+      "name": "Client-side guards are not security. Do not use real credentials or sensitive information."
+    },
+    {
+      "role": "text",
+      "name": " "
+    },
+    {
+      "role": "text",
+      "name": "Accounts and stories stay in this browser; clearing browser data removes them. No cloud sync or backup is provided."
+    },
+    {
+      "role": "text",
+      "name": "WriteSpace — Room for your words."
+    },
+    {
+      "role": "text",
+      "name": "A local demo, not a shared publishing service."
+    }
+  ]
+}
+Styles:
+{
+  "font": "\"Trebuchet MS\", \"Gill Sans\", sans-serif",
+  "background": "rgb(248, 246, 240)",
+  "width": 390
+}
+HTML:
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WriteSpace: a calm, browser-local demo for plain-text stories. Never use real credentials or sensitive information.">
+    <meta name="theme-color" content="#f8f6f0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>WriteSpace — Room for your words</title>
+    <script type="module" crossorigin="" src="/assets/index-BPWyDRzV.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-DI0gnsec.css">
+  </head>
+  <body class="bg-background font-sans text-foreground antialiased">
+    <div id="root"><a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:z-30 focus:bg-surface focus:p-4">Skip to content</a><header class="sticky top-0 z-20 border-b border-border bg-background"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-6 py-4"><a class="rounded-control font-display text-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href="/">WriteSpace</a><button type="button" aria-expanded="true" aria-controls="public-navigation" aria-label="Close navigation" class="rounded-control px-3 py-2 text-sm hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:hidden"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M6 18L18 6"></path></svg></button><nav id="public-navigation" aria-label="Public navigation" class="flex w-full flex-col gap-2 md:flex md:w-auto md:flex-row md:items-center"><a class="rounded-control px-3 py-2 text-sm hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href="/login">Log in</a><a class="rounded-control px-3 py-2 text-sm hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href="/register">Register</a></nav></div></header><main id="main" class="mx-auto max-w-6xl px-6"><section aria-labelledby="hero-title" class="py-16 md:py-24"><p class="mb-6 text-sm font-medium uppercase tracking-widest text-foreground-muted">A browser-local writing demo</p><h1 id="hero-title" class="max-w-3xl font-display text-hero font-normal">Room for your words.</h1><p class="mt-6 max-w-xl text-lg leading-relaxed text-foreground-muted">A quiet place to write, read, and explore. Start with an idea, give it space, and discover the stories in your browser.</p><div class="mt-8 flex flex-wrap items-center gap-6"><a class="rounded-control focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring bg-primary-600 px-5 py-3 font-medium text-surface transition-colors duration-quick hover:bg-primary-700 motion-reduce:transition-none" href="/register">Get started</a><a class="rounded-control focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring py-3 underline underline-offset-4" href="/login">Already have an account? Log in</a></div></section><section aria-labelledby="features-title" class="pb-section"><h2 id="features-title" class="mb-8 font-display text-3xl">Less noise. More story.</h2><div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"><article class="rounded-control border border-border p-6"><h3 class="mb-3 font-display text-2xl">Words come first</h3><p class="leading-relaxed text-foreground-muted">A simple plain-text space for ideas, reflections, and the stories you want to tell.</p></article><article class="rounded-control border border-border p-6"><h3 class="mb-3 font-display text-2xl">Read at your own pace</h3><p class="leading-relaxed text-foreground-muted">Discover the latest stories saved in this browser, with room to focus on each one.</p></article><article class="rounded-control border border-border p-6"><h3 class="mb-3 font-display text-2xl">A place to practice</h3><p class="leading-relaxed text-foreground-muted">Try User and Admin workflows in a small local demo, without a backend or cloud account.</p></article></div></section><section aria-labelledby="latest-title" class="pb-section"><h2 id="latest-title" class="font-display text-3xl">Latest stories</h2><p class="mb-8 mt-3 text-foreground-muted">A glimpse of what is saved in this browser.</p><p class="rounded-control border border-border p-6 text-foreground-muted">No stories yet. Your first story can start here.</p></section><aside aria-label="Demo limitations" class="rounded-control border border-border px-5 py-4 text-sm leading-relaxed text-foreground-muted"><p><strong class="font-semibold text-foreground">Demo only.</strong> Passwords are stored in plaintext in localStorage. The fixed Admin login is <strong class="font-semibold">admin/admin</strong>. Client-side guards are not security. Do not use real credentials or sensitive information. Accounts and stories stay in this browser; clearing browser data removes them. No cloud sync or backup is provided.</p></aside></main><footer class="mx-auto mt-16 flex max-w-6xl flex-wrap justify-between gap-4 border-t border-border px-6 py-8 text-sm text-foreground-muted"><p>WriteSpace — Room for your words.</p><p>A local demo, not a shared publishing service.</p></footer></div>
+  
+
+</body></html>
+
+## login
+Accessibility:
+{
+  "role": "WebArea",
+  "name": "WriteSpace — Room for your words",
+  "children": [
+    {
+      "role": "link",
+      "name": "WriteSpace"
+    },
+    {
+      "role": "link",
+      "name": "Log in"
+    },
+    {
+      "role": "link",
+      "name": "Register"
+    },
+    {
+      "role": "heading",
+      "name": "Log in to WriteSpace",
+      "level": 1
+    },
+    {
+      "role": "text",
+      "name": "Welcome back to your browser-local writing space."
+    },
+    {
+      "role": "text",
+      "name": "Username"
+    },
+    {
+      "role": "textbox",
+      "name": "Username",
+      "required": true
+    },
+    {
+      "role": "text",
+      "name": "Password"
+    },
+    {
+      "role": "textbox",
+      "name": "Password",
+      "required": true
+    },
+    {
+      "role": "button",
+      "name": "Log in"
+    },
+    {
+      "role": "text",
+      "name": "Fixed demo Admin: username admin, password admin."
+    },
+    {
+      "role": "text",
+      "name": "New to WriteSpace?"
+    },
+    {
+      "role": "text",
+      "name": " "
+    },
+    {
+      "role": "link",
+      "name": "Register"
+    },
+    {
+      "role": "link",
+      "name": "Back to WriteSpace"
+    },
+    {
+      "role": "text",
+      "name": "Demo only."
+    },
+    {
+      "role": "text",
+      "name": " Passwords are stored in plaintext in localStorage."
+    },
+    {
+      "role": "text",
+      "name": " "
+    },
+    {
+      "role": "text",
+      "name": "The fixed Admin login is "
+    },
+    {
+      "role": "text",
+      "name": "admin/admin"
+    },
+    {
+      "role": "text",
+      "name": "."
+    },
+    {
+      "role": "text",
+      "name": " "
+    },
+    {
+      "role": "text",
+      "name": "Client-side guards are not security. Do not use real credentials or sensitive information."
+    },
+    {
+      "role": "text",
+      "name": " "
+    },
+    {
+      "role": "text",
+      "name": "Accounts and stories stay in this browser; clearing browser data removes them. No cloud sync or backup is provided."
+    }
+  ]
+}
+Styles:
+{
+  "font": "\"Trebuchet MS\", \"Gill Sans\", sans-serif",
+  "background": "rgb(248, 246, 240)",
+  "width": 768
+}
+HTML:
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WriteSpace: a calm, browser-local demo for plain-text stories. Never use real credentials or sensitive information.">
+    <meta name="theme-color" content="#f8f6f0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>WriteSpace — Room for your words</title>
+    <script type="module" crossorigin="" src="/assets/index-BPWyDRzV.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-DI0gnsec.css">
+  </head>
+  <body class="bg-background font-sans text-foreground antialiased">
+    <div id="root"><header class="sticky top-0 z-20 border-b border-border bg-background"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-6 py-4"><a class="rounded-control font-display text-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href="/">WriteSpace</a><button type="button" aria-expanded="false" aria-controls="public-navigation" aria-label="Open navigation" class="rounded-control px-3 py-2 text-sm hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:hidden"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button><nav id="public-navigation" aria-label="Public navigation" class="hidden w-full flex-col gap-2 md:flex md:w-auto md:flex-row md:items-center"><a class="rounded-control px-3 py-2 text-sm hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href="/login">Log in</a><a class="rounded-control px-3 py-2 text-sm hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href="/register">Register</a></nav></div></header><main class="mx-auto max-w-lg px-6 py-16"><h1 class="font-display text-4xl">Log in to WriteSpace</h1><p class="mt-4 text-foreground-muted">Welcome back to your browser-local writing space.</p><form novalidate="" class="mt-8 space-y-6"><div><label for="username" class="mb-2 block text-sm font-medium">Username</label><input name="username" type="text" autocomplete="username" id="username" required="" aria-required="true" aria-invalid="false" class="w-full rounded-control border bg-surface px-3 py-3 text-foreground
+          focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-60
+          border-border" value=""></div><div><label for="password" class="mb-2 block text-sm font-medium">Password</label><input name="password" type="password" autocomplete="current-password" id="password" required="" aria-required="true" aria-invalid="false" class="w-full rounded-control border bg-surface px-3 py-3 text-foreground
+          focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-60
+          border-border" value=""></div><button type="submit" class="w-full rounded-control bg-primary-600 px-5 py-3 font-medium text-surface
+              hover:bg-primary-700 focus-visible:outline-none focus-visible:ring-2
+              focus-visible:ring-ring focus-visible:ring-offset-2">Log in</button></form><p class="mt-6 text-sm text-foreground-muted">Fixed demo Admin: username admin, password admin.</p><p class="mt-6 text-sm text-foreground-muted">New to WriteSpace? <a class="rounded-control underline underline-offset-4 focus-visible:ring-2 focus-visible:ring-ring" href="/register">Register</a></p><a class="mt-6 inline-block rounded-control text-sm underline underline-offset-4 focus-visible:ring-2 focus-visible:ring-ring" href="/">Back to WriteSpace</a><div class="mt-12"><aside aria-label="Demo limitations" class="rounded-control border border-border px-5 py-4 text-sm leading-relaxed text-foreground-muted"><p><strong class="font-semibold text-foreground">Demo only.</strong> Passwords are stored in plaintext in localStorage. The fixed Admin login is <strong class="font-semibold">admin/admin</strong>. Client-side guards are not security. Do not use real credentials or sensitive information. Accounts and stories stay in this browser; clearing browser data removes them. No cloud sync or backup is provided.</p></aside></div></main></div>
+  
+
+</body></html>
+
+## admin
+Accessibility:
+{
+  "role": "WebArea",
+  "name": "WriteSpace — Room for your words",
+  "children": [
+    {
+      "role": "link",
+      "name": "Skip to content"
+    },
+    {
+      "role": "link",
+      "name": "WriteSpace"
+    },
+    {
+      "role": "image",
+      "name": "Admin avatar"
+    },
+    {
+      "role": "text",
+      "name": "Demo Admin"
+    },
+    {
+      "role": "link",
+      "name": "Blogs"
+    },
+    {
+      "role": "link",
+      "name": "Write a post"
+    },
+    {
+      "role": "link",
+      "name": "Admin dashboard"
+    },
+    {
+      "role": "link",
+      "name": "User management"
+    },
+    {
+      "role": "button",
+      "name": "Log out"
+    },
+    {
+      "role": "text",
+      "name": "Browser-local oversight"
+    },
+    {
+      "role": "heading",
+      "name": "Admin dashboard",
+      "level": 1
+    },
+    {
+      "role": "text",
+      "name": "Total Posts"
+    },
+    {
+      "role": "text",
+      "name": "0"
+    },
+    {
+      "role": "text",
+      "name": "Total Users"
+    },
+    {
+      "role": "text",
+      "name": "1"
+    },
+    {
+      "role": "text",
+      "name": "Total Admins"
+    },
+    {
+      "role": "text",
+      "name": "1"
+    },
+    {
+      "role": "text",
+      "name": "Total Users includes every stored account plus the fixed Admin. Total Admins includes stored Admins plus the fixed Admin, without double-counting reserved admin identities."
+    },
+    {
+      "role": "text",
+      "name": "Release gate: the fourth statistic awaits a product decision. Only three approved metrics are shown."
+    },
+    {
+      "role": "heading",
+      "name": "Quick actions",
+      "level": 2
+    },
+    {
+      "role": "link",
+      "name": "Write a new post"
+    },
+    {
+      "role": "link",
+      "name": "Manage accounts"
+    },
+    {
+      "role": "heading",
+      "name": "Recent posts",
+      "level": 2
+    },
+    {
+      "role": "text",
+      "name": "The five newest posts in this browser."
+    },
+    {
+      "role": "text",
+      "name": "No posts yet. Write a new post to begin."
+    }
+  ]
+}
+Styles:
+{
+  "font": "\"Trebuchet MS\", \"Gill Sans\", sans-serif",
+  "background": "rgb(248, 246, 240)",
+  "width": 1280
+}
+HTML:
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WriteSpace: a calm, browser-local demo for plain-text stories. Never use real credentials or sensitive information.">
+    <meta name="theme-color" content="#f8f6f0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>WriteSpace — Room for your words</title>
+    <script type="module" crossorigin="" src="/assets/index-BPWyDRzV.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-DI0gnsec.css">
+  </head>
+  <body class="bg-background font-sans text-foreground antialiased">
+    <div id="root"><a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:z-30 focus:bg-surface focus:p-4">Skip to content</a><header class="sticky top-0 z-20 border-b border-border bg-background"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-6 py-4"><a class="rounded-control font-display text-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href="/">WriteSpace</a><button type="button" aria-expanded="false" aria-controls="blog-navigation" aria-label="Open navigation" class="rounded-control px-3 py-2 text-sm hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:hidden"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button><nav id="blog-navigation" aria-label="Blog navigation" class="hidden w-full flex-col gap-2 md:flex md:w-auto md:flex-row md:items-center"><div class="flex items-center gap-2 px-3 py-2 text-sm text-foreground-muted"><span role="img" aria-label="Admin avatar" class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-control bg-violet-100 text-violet-800"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6l4 4 5-6 5 6 4-4-2 13H5L3 6zM5 16h14" stroke-linejoin="round" stroke-linecap="round"></path></svg></span><span>Demo Admin</span></div><a class="rounded-control px-3 py-2 text-sm hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href="/blogs">Blogs</a><a class="rounded-control px-3 py-2 text-sm hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href="/write">Write a post</a><a aria-current="page" class="rounded-control px-3 py-2 text-sm hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring active" href="/admin">Admin dashboard</a><a class="rounded-control px-3 py-2 text-sm hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href="/users">User management</a><button type="button" class="rounded-control px-3 py-2 text-sm hover:bg-surface-raised focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">Log out</button></nav></div></header><main id="main" class="mx-auto max-w-6xl px-6 py-16"><p class="text-sm text-foreground-muted">Browser-local oversight</p><h1 class="mt-3 font-display text-4xl">Admin dashboard</h1><dl aria-label="Approved statistics" class="mt-10 grid gap-6 md:grid-cols-3"><div class="rounded-control border border-border bg-surface p-6"><dt class="text-sm text-foreground-muted">Total Posts</dt><dd class="mt-3 font-display text-4xl tabular-nums">0</dd></div><div class="rounded-control border border-border bg-surface p-6"><dt class="text-sm text-foreground-muted">Total Users</dt><dd class="mt-3 font-display text-4xl tabular-nums">1</dd></div><div class="rounded-control border border-border bg-surface p-6"><dt class="text-sm text-foreground-muted">Total Admins</dt><dd class="mt-3 font-display text-4xl tabular-nums">1</dd></div></dl><p class="mt-4 text-sm text-foreground-muted">Total Users includes every stored account plus the fixed Admin. Total Admins includes stored Admins plus the fixed Admin, without double-counting reserved admin identities.</p><p class="mt-3 text-sm text-foreground-muted">Release gate: the fourth statistic awaits a product decision. Only three approved metrics are shown.</p><section aria-labelledby="quick-actions" class="mt-12"><h2 id="quick-actions" class="font-display text-2xl">Quick actions</h2><div class="mt-4 flex flex-wrap gap-6"><a class="rounded-control py-2 underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href="/write">Write a new post</a><a class="rounded-control py-2 underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href="/users">Manage accounts</a></div></section><section aria-labelledby="recent-posts" class="mt-16"><h2 id="recent-posts" class="font-display text-2xl">Recent posts</h2><p class="mt-2 text-sm text-foreground-muted">The five newest posts in this browser.</p><p class="mt-6 text-foreground-muted">No posts yet. Write a new post to begin.</p></section></main></div>
+  
+
+</body></html>

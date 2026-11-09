@@ -80,20 +80,56 @@ test('Admin recent five read/edit/delete controls and alternate quick/nav entry 
   await page.getByLabel('Title').fill('Admin revision');
   await page.getByRole('button', { name: 'Save changes', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Admin revision', exact: true })).toBeVisible();
+  const originalPost = recentPosts.find((post) => post.title === 'Admin story 6');
+  const editedPosts = recentPosts.map((post) => post.id === originalPost.id
+    ? { ...post, title: 'Admin revision' } : post);
+  // Exact collection equality preserves the original author/timestamp and unrelated posts.
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('writespace_posts')))).toEqual(editedPosts);
+  await page.reload();
+  await expect(page.getByRole('heading', { name: 'Admin revision', exact: true })).toBeVisible();
+  await expect(page.getByText('Reader-owned words 6.')).toBeVisible();
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('writespace_posts')))).toEqual(editedPosts);
   await page.getByRole('link', { name: 'Admin dashboard', exact: true }).click();
   page.once('dialog', (dialog) => dialog.dismiss());
   await page.getByRole('button', { name: 'Delete Admin revision', exact: true }).click();
   await expect(page.getByRole('link', { name: 'Read Admin revision', exact: true })).toBeVisible();
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('writespace_posts')))).toEqual(editedPosts);
+  await page.reload();
+  await expect(page.getByRole('link', { name: 'Read Admin revision', exact: true })).toBeVisible();
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('writespace_posts')))).toEqual(editedPosts);
   page.once('dialog', (dialog) => dialog.accept());
   await page.getByRole('button', { name: 'Delete Admin revision', exact: true }).click();
   await expect(page.getByRole('link', { name: 'Read Admin revision', exact: true })).toHaveCount(0);
   await expect(page.getByRole('link', { name: 'Read Admin story 1', exact: true })).toBeVisible();
   await expect(page.getByText('Total Posts').locator('..')).toContainText('5');
+  const remainingPosts = recentPosts.filter((post) => post.id !== originalPost.id);
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('writespace_posts')))).toEqual(remainingPosts);
+  await page.reload();
+  await expect(page.getByRole('link', { name: 'Read Admin revision', exact: true })).toHaveCount(0);
+  await expect(page.getByRole('link', { name: 'Read Admin story 1', exact: true })).toBeVisible();
+  await expect(page.getByText('Total Posts').locator('..')).toContainText('5');
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('writespace_posts')))).toEqual(remainingPosts);
   await page.getByRole('link', { name: 'Write a new post', exact: true }).click();
   await page.getByLabel('Title').fill('Quick-action post');
   await page.getByLabel('Content').fill('Created using the quick action.');
   await page.getByRole('button', { name: 'Publish post', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Quick-action post', exact: true })).toBeVisible();
+  const createdPosts = await page.evaluate(() => JSON.parse(localStorage.getItem('writespace_posts')));
+  expect(createdPosts).toHaveLength(remainingPosts.length + 1);
+  const createdPost = createdPosts.find((post) => post.title === 'Quick-action post');
+  expect(createdPost).toEqual({
+    id: expect.stringMatching(/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i),
+    title: 'Quick-action post', content: 'Created using the quick action.',
+    authorId: demoSession.userId, authorName: demoSession.displayName,
+    createdAt: expect.any(String),
+  });
+  expect(new Date(createdPost.createdAt).toISOString()).toBe(createdPost.createdAt);
+  expect(recentPosts.map((post) => post.id)).not.toContain(createdPost.id);
+  expect(createdPosts.filter((post) => post.id !== createdPost.id)).toEqual(remainingPosts);
+  await page.reload();
+  await expect(page.getByRole('heading', { name: 'Quick-action post', exact: true })).toBeVisible();
+  await expect(page.getByText('Created using the quick action.')).toBeVisible();
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('writespace_posts')))).toEqual(createdPosts);
   await page.getByRole('link', { name: 'Admin dashboard', exact: true }).click();
   await page.getByRole('link', { name: 'User management', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'User management', exact: true })).toBeVisible();

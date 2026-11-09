@@ -31,7 +31,7 @@ test('empty discovery and mobile navigation expose real account destinations', a
   const toggle = page.getByRole('button', { name: 'Open navigation' });
   await expect(page.getByRole('link', { name: 'Log in', exact: true })).toBeHidden();
   await toggle.click();
-  await expect(toggle).toHaveAttribute('aria-expanded', 'true');
+  await expect(page.getByRole('button', { name: 'Close navigation', exact: true })).toHaveAttribute('aria-expanded', 'true');
   await expect(page.getByRole('link', { name: 'Register', exact: true })).toBeVisible();
   await page.screenshot({ path: testInfo.outputPath('discovery-mobile-menu.png'), fullPage: true });
   await page.getByRole('button', { name: 'Close navigation' }).click();

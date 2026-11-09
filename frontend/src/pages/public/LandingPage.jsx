@@ -36,7 +36,14 @@ export default function LandingPage() {
             >
               {session ? 'Explore blogs' : 'Get started'}
             </Link>
-            {!session && <Link to="/login" className={`${linkFocus} py-3 underline underline-offset-4`}>Already have an account? Log in</Link>}
+            {!session && (
+              <Link
+                to="/login"
+                className={`${linkFocus} py-3 underline underline-offset-4`}
+              >
+                Already have an account? Log in
+              </Link>
+            )}
           </div>
         </section>
         <section aria-labelledby="features-title" className="pb-section">
@@ -79,7 +86,9 @@ export default function LandingPage() {
         </section>
         <DemoWarning />
       </main>
-      <footer className="mx-auto mt-16 flex max-w-6xl flex-wrap justify-between gap-4 border-t border-border px-6 py-8 text-sm text-foreground-muted">
+      <footer
+        className="mx-auto mt-16 flex max-w-6xl flex-wrap justify-between gap-4 border-t border-border px-6 py-8 text-sm text-foreground-muted"
+      >
         <p>WriteSpace — Room for your words.</p>
         <p>A local demo, not a shared publishing service.</p>
       </footer>
