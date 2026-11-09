@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PublicNavbar } from '../../components/PublicNavbar.jsx';
 import { DemoWarning } from '../../components/DemoWarning.jsx';
-import { getPosts } from '../../utils/storage.js';
+import { newestPosts, postDate, postExcerpt } from '../../utils/posts.js';
 import { getSession } from '../../utils/auth.js';
 
 const features = [
@@ -17,7 +17,7 @@ const linkFocus = 'rounded-control focus-visible:outline-none focus-visible:ring
 export default function LandingPage() {
   const [, setRevision] = useState(0);
   const session = getSession();
-  const posts = getPosts().sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt)).slice(0, 3);
+  const posts = newestPosts(undefined, 3);
   return (
     <>
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:z-30 focus:bg-surface focus:p-4">Skip to content</a>
@@ -60,14 +60,12 @@ export default function LandingPage() {
                   <p className="mb-4 text-sm text-foreground-muted">
                     {post.authorName} ·{' '}
                     <time dateTime={post.createdAt}>
-                      {new Date(post.createdAt).toLocaleDateString('en-US', {
-                        year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC',
-                      })}
+                      {postDate(post.createdAt)}
                     </time>
                   </p>
                   <h3 className="break-words font-display text-2xl">{post.title}</h3>
                   <p className="mb-6 mt-3 break-words leading-relaxed text-foreground-muted">
-                    {post.content.slice(0, 120)}{post.content.length > 120 ? '…' : ''}
+                    {postExcerpt(post.content)}
                   </p>
                   <Link to={session ? `/blog/${post.id}` : '/login'} className={`${linkFocus} mt-auto self-start py-2 underline underline-offset-4`}>
                     Read {post.title}
