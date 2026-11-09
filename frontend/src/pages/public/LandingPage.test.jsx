@@ -89,7 +89,7 @@ it('uses guest login destinations for previews and all account entry links', asy
   expect(screen.getByRole('link', { name: 'Register' })).toHaveAttribute('href', '/register');
   expect(screen.getByRole('link', { name: 'Log in' })).toHaveAttribute('href', '/login');
   await user.click(screen.getByRole('link', { name: 'Read Story 4' }));
-  expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Page not found');
+  expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Log in to WriteSpace');
   expect(getSession()).toBeNull();
   await user.click(screen.getByRole('link', { name: 'Back to WriteSpace' }));
   expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Room for your words.');
