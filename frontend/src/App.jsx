@@ -7,6 +7,8 @@ import RegisterPage from './pages/accounts/RegisterPage.jsx';
 import Home from './pages/blogs/Home.jsx';
 import ReadBlog from './pages/blogs/ReadBlog.jsx';
 import WriteBlog from './pages/blogs/WriteBlog.jsx';
+import AdminDashboard from './pages/admin/AdminDashboard.jsx';
+import UserManagement from './pages/admin/UserManagement.jsx';
 import { ProtectedRoute } from './components/ProtectedRoute.jsx';
 
 /** Compose only completed route pages under the existing single router. */
@@ -23,6 +25,10 @@ export default function App() {
         <Route path="/blog/:id" element={<ReadBlog />} />
         <Route path="/write" element={<WriteBlog />} />
         <Route path="/edit/:id" element={<WriteBlog />} />
+      </Route>
+      <Route element={<ProtectedRoute adminOnly />}>
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/users" element={<UserManagement />} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
